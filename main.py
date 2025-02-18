@@ -20,7 +20,7 @@ async def send_message(message, user_message):
         print("message was empty because intents were not enabled")
         return
 
-    if user_message[0] == '?':
+    if user_message[0] == '?': # Prefix
         try:
             response = get_response(user_message)
             await message.channel.send(response)
